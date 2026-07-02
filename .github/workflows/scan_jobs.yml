@@ -2,8 +2,7 @@ name: Escanear Vacantes RD
 
 on:
   schedule:
-    - cron: '0 12 * * *'   # 8:00 AM hora RD (12:00 UTC)
-    - cron: '0 0 * * *'    # 8:00 PM hora RD (0:00 UTC)
+    - cron: '0 */3 * * *'  # Cada 3 horas, 24/7 (8 ejecuciones al dia)
   workflow_dispatch:        # Permite ejecución manual
 
 jobs:
