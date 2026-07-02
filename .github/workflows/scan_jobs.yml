@@ -1,0 +1,24 @@
+name: Escanear Vacantes RD
+
+on:
+  schedule:
+    - cron: '0 12 * * *'   # 8:00 AM hora RD (12:00 UTC)
+    - cron: '0 0 * * *'    # 8:00 PM hora RD (0:00 UTC)
+  workflow_dispatch:        # Permite ejecución manual
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Instalar dependencias
+        run: pip install requests
+      - name: Escanear vacantes
+        run: python job_scanner.py
+        env:
+          JOB_EMAIL: ${{ secrets.JOB_EMAIL }}
+          JOB_EMAIL_PASS: ${{ secrets.JOB_EMAIL_PASS }}
+          JOB_NOTIFY_EMAIL: ${{ secrets.JOB_NOTIFY_EMAIL }}
