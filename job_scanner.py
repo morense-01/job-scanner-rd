@@ -24,30 +24,107 @@ STATE_FILE = "seen_jobs.json"
 # PERFIL — Palabras clave que debe contener una vacante
 # ============================================================
 KEYWORDS = [
-    # Cargos
-    "director de ti", "director de tecnologia", "gerente de tecnologia",
-    "gerente de ti", "gerente de sistemas", "jefe de ti", "jefe de sistemas",
-    "cio", "cto", "it manager", "technology manager", "infrastructure manager",
-    "coordinador de ti", "coordinador de sistemas", "administrador de sistemas",
-    "supervisor de ti", "encargado de ti", "encargado de tecnologia",
-    "lider de infraestructura", "cloud manager", "security manager",
-    "jefe de seguridad", "gerente de seguridad", "director de sistemas",
-    "soporte tecnico senior", "administrador de infraestructura",
-    "consultor de tecnologia", "consultor cloud",
-    # Áreas técnicas
-    "infraestructura", "ciberseguridad", "seguridad informatica",
-    "seguridad de la informacion", "cloud computing", "computo en la nube",
-    "azure", "amazon web services", "aws", "google cloud",
+    # === GERENTE / MANAGER (mismo puesto, distintos nombres) ===
+    "gerente de ti", "gerente ti", "gerente it", "gerente de tecnologia",
+    "gerente de tecnologia de la informacion", "gerente de sistemas",
+    "gerente de informatica", "gerente de computo", "gerente de comunicaciones",
+    "gerente de operaciones ti", "gerente de infraestructura",
+    "gerente de soporte tecnico", "gerente de seguridad",
+    "gerente de seguridad de la informacion", "gerente de ciberseguridad",
+    "gerente de cloud", "gerente de la nube", "gerente de proyectos ti",
+    "gerente de transformacion digital", "gerente de gobierno ti",
+    "gerente de datos", "gerente de base de datos",
+    "manager de ti", "manager it", "it manager", "technology manager",
+    "infrastructure manager", "security manager", "operations manager ti",
+    "service delivery manager", "technical manager",
+    # === DIRECTOR ===
+    "director de ti", "director ti", "director it", "director de tecnologia",
+    "director de tecnologia de la informacion", "director de sistemas",
+    "director de informatica", "director de computo",
+    "director de comunicaciones", "director de operaciones ti",
+    "director de infraestructura", "director de seguridad",
+    "director de seguridad informatica", "director de ciberseguridad",
+    "director de cloud", "director de transformacion digital",
+    "director de gobierno ti", "director de datos",
+    "director corporativo de ti", "director corporativo de tecnologia",
+    "director de estrategia digital", "director de tecnologia y estrategia",
+    "cio", "chief information officer", "cto", "chief technology officer",
+    # === JEFE / HEAD ===
+    "jefe de ti", "jefe ti", "jefe de tecnologia", "jefe de sistemas",
+    "jefe de informatica", "jefe de computo", "jefe de comunicaciones",
+    "jefe de infraestructura", "jefe de seguridad informatica",
+    "jefe de ciberseguridad", "jefe de seguridad de la informacion",
+    "jefe de soporte", "jefe de proyectos ti", "head of it",
+    "head of technology", "head of infrastructure", "head of security",
+    # === COORDINADOR / SUPERVISOR / ENCARGADO ===
+    "coordinador de ti", "coordinador ti", "coordinador de sistemas",
+    "coordinador de informatica", "coordinador de infraestructura",
+    "coordinador de seguridad", "coordinador de soporte",
+    "supervisor de ti", "supervisor de sistemas", "supervisor de informatica",
+    "supervisor de infraestructura", "supervisor de soporte",
+    "encargado de ti", "encargado de tecnologia", "encargado de sistemas",
+    "encargado de informatica", "encargado de infraestructura",
+    "encargado de seguridad", "encargado de soporte tecnico",
+    "encargado de comunicaciones",
+    # === ADMINISTRADOR ===
+    "administrador de ti", "administrador de sistemas",
+    "administrador de infraestructura", "administrador de servidores",
+    "administrador de redes", "administrador de seguridad",
+    "administrador de base de datos", "dba",
+    # === CONSULTOR / ANALISTA SENIOR ===
+    "consultor de tecnologia", "consultor de ti", "consultor it",
+    "consultor cloud", "consultor de infraestructura",
+    "consultor de ciberseguridad", "consultor de seguridad informatica",
+    "analista de sistemas senior", "analista de infraestructura senior",
+    "analista de soporte senior", "analista de seguridad senior",
+    # === LIDER ===
+    "lider de ti", "lider de tecnologia", "lider de sistemas",
+    "lider de infraestructura", "lider de proyectos ti",
+    "lider de soporte", "lider de seguridad",
+    # === SOPORTE TECNICO ===
+    "soporte tecnico senior", "soporte tecnico lider",
+    "tecnico de sistemas senior", "tecnico de soporte senior",
+    "especialista de soporte", "especialista de infraestructura",
+    # === AUDITOR ===
+    "auditor de sistemas", "auditor de ti", "auditor informatico",
+    "auditor de seguridad", "auditor de tecnologia",
+    # === INGENIERO SENIOR ===
+    "ingeniero de sistemas senior", "ingeniero de infraestructura senior",
+    "ingeniero de redes senior", "ingeniero de seguridad senior",
+    "ingeniero cloud senior", "ingeniero de soporte senior",
+    # === AREAS TECNICAS (siempre relevantes) ===
+    "infraestructura", "infraestructura ti", "infraestructura tecnologica",
+    "ciberseguridad", "seguridad informatica", "seguridad de la informacion",
+    "seguridad perimetral", "seguridad en la nube",
+    "cloud computing", "computo en la nube", "nube",
+    "azure", "amazon web services", "aws", "google cloud", "gcp",
     "transformacion digital", "gobierno ti", "gobierno de ti",
-    "continuidad de negocio", "bcp", "drp", "recuperacion ante desastres",
-    "itil", "cobit", "iso 27001", "zero trust",
-    "virtualizacion", "vmware", "hyper-v", "servidores",
-    "redes", "vlan", "fortinet", "firewall",
-    "siem", "sentinel", "vulnerabilidad", "pentesting",
-    "erp", "sap", "dynamics 365", "microsoft 365",
-    "active directory", "entra id", "intune",
-    "backup", "veeam", "acronis", "almacenamiento",
-    "sla", "proveedores", "presupuesto ti",
+    "gobierno tecnologic", "gobierno corporativo ti",
+    "continuidad de negocio", "continuidad operativa",
+    "bcp", "drp", "recuperacion ante desastres", "plan de contingencia",
+    "itil", "cobit", "iso 27001", "iso 27000",
+    "zero trust", "confianza cero",
+    "virtualizacion", "vmware", "hyper-v", "citrix", "nube hibrida",
+    "servidores", "windows server", "active directory", "linux",
+    "redes", "vlan", "vpn", "sd-wan", "routing", "switching",
+    "fortinet", "fortigate", "firewall", "ngfw",
+    "siem", "sentinel", "soc", "vulnerabilidad", "vulnerabilities",
+    "pentesting", "ethical hacking", "kali linux", "pen testing",
+    "erp", "sap", "sap r3", "sap s4hana", "dynamics 365",
+    "microsoft 365", "m365", "office 365", "sharepoint",
+    "entra id", "intune", "endpoint manager", "mdm",
+    "backup", "veeam", "acronis", "azure backup", "aws backup",
+    "almacenamiento", "storage", "san", "nas",
+    "sla", "proveedores", "vendor management", "contratos ti",
+    "presupuesto ti", "presupuesto de tecnologia", "gestion financiera ti",
+    "roi", "kpi", "okr", "indicadores", "dashboard",
+    "automatizacion", "powershell", "python", "infraestructura como codigo",
+    "redes inalambricas", "wifi industrial", "wifi corporativo",
+    "data center", "centro de datos", "datacenter",
+    "monitoreo", "monitoreo de infraestructura", "observabilidad",
+    "parches", "patch management", "actualizaciones",
+    "cumplimiento normativo", "regulatorio", "auditoria",
+    "riesgo tecnologico", "gestion de riesgos", "risk management",
 ]
 
 # ============================================================
@@ -120,7 +197,7 @@ def scan_platform(platform):
     """Escanea una plataforma y devuelve vacantes encontradas"""
     results = []
     try:
-        query = quote("gerente director tecnologia sistemas informatica cloud")
+        query = quote("gerente director jefe coordinador encargado supervisor administrador lider sistemas informatica tecnologia infraestructura ciberseguridad cloud servidores redes soporte")
         url = platform["url"].format(query)
         r = requests.get(url, headers=HEADERS, timeout=15)
         if r.status_code == 200:
