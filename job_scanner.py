@@ -24,75 +24,143 @@ STATE_FILE = "seen_jobs.json"
 # PERFIL — Palabras clave que debe contener una vacante
 # ============================================================
 KEYWORDS = [
-    # === GERENTE / MANAGER (mismo puesto, distintos nombres) ===
+    # ================================================================
+    # GERENCIA / MANAGER — todas las variantes usadas en RD
+    # ================================================================
     "gerente de ti", "gerente ti", "gerente it", "gerente de tecnologia",
-    "gerente de tecnologia de la informacion", "gerente de sistemas",
-    "gerente de informatica", "gerente de computo", "gerente de comunicaciones",
-    "gerente de operaciones ti", "gerente de infraestructura",
-    "gerente de soporte tecnico", "gerente de seguridad",
-    "gerente de seguridad de la informacion", "gerente de ciberseguridad",
-    "gerente de cloud", "gerente de la nube", "gerente de proyectos ti",
-    "gerente de transformacion digital", "gerente de gobierno ti",
+    "gerente de tecnologias de la informacion", "gerente de informatica",
+    "gerente de sistemas", "gerente de computo", "gerente de comunicaciones",
+    "gerente de operaciones de ti", "gerente de operaciones ti",
+    "gerente de infraestructura tecnologica", "gerente de infraestructura ti",
+    "gerente de servicios de ti", "gerente de soporte tecnologico",
+    "gerente de soporte tecnico", "gerente de desarrollo de software",
+    "gerente de seguridad informatica", "gerente de ciberseguridad",
+    "gerente de seguridad de la informacion", "gerente de redes y telecomunicaciones",
+    "gerente de redes", "gerente de telecomunicaciones",
+    "gerente de proyectos ti", "gerente de proyectos de ti",
+    "gerente de innovacion tecnologica", "gerente de transformacion digital",
+    "gerente de cloud", "gerente de la nube", "gerente de gobierno ti",
     "gerente de datos", "gerente de base de datos",
+    "gerente senior de seguridad y ti",
     "manager de ti", "manager it", "it manager", "technology manager",
-    "infrastructure manager", "security manager", "operations manager ti",
+    "information technology manager", "ict manager",
+    "infrastructure manager", "infraestructura manager",
+    "security manager", "operations manager ti",
     "service delivery manager", "technical manager",
-    # === DIRECTOR ===
-    "director de ti", "director ti", "director it", "director de tecnologia",
-    "director de tecnologia de la informacion", "director de sistemas",
-    "director de informatica", "director de computo",
-    "director de comunicaciones", "director de operaciones ti",
-    "director de infraestructura", "director de seguridad",
-    "director de seguridad informatica", "director de ciberseguridad",
+    "infrastructure and security manager",
+    "technology operations manager", "information systems manager",
+    "it operations manager", "it service manager",
+    "digital transformation manager", "infrastructure and security manager",
+    # ================================================================
+    # DIRECCION / DIRECTOR
+    # ================================================================
+    "director de ti", "director ti", "director it",
+    "director de tecnologia", "director de tecnologias de la informacion",
+    "director de sistemas", "director de informatica",
+    "director de computo", "director de comunicaciones",
+    "director de operaciones de ti", "director de operaciones ti",
+    "director de infraestructura", "director de infraestructura tecnologica",
+    "director de seguridad", "director de seguridad informatica",
+    "director de ciberseguridad", "director de seguridad de la informacion",
     "director de cloud", "director de transformacion digital",
     "director de gobierno ti", "director de datos",
     "director corporativo de ti", "director corporativo de tecnologia",
-    "director de estrategia digital", "director de tecnologia y estrategia",
-    "cio", "chief information officer", "cto", "chief technology officer",
-    # === JEFE / HEAD ===
-    "jefe de ti", "jefe ti", "jefe de tecnologia", "jefe de sistemas",
-    "jefe de informatica", "jefe de computo", "jefe de comunicaciones",
-    "jefe de infraestructura", "jefe de seguridad informatica",
-    "jefe de ciberseguridad", "jefe de seguridad de la informacion",
-    "jefe de soporte", "jefe de proyectos ti", "head of it",
-    "head of technology", "head of infrastructure", "head of security",
-    # === COORDINADOR / SUPERVISOR / ENCARGADO ===
-    "coordinador de ti", "coordinador ti", "coordinador de sistemas",
-    "coordinador de informatica", "coordinador de infraestructura",
-    "coordinador de seguridad", "coordinador de soporte",
-    "supervisor de ti", "supervisor de sistemas", "supervisor de informatica",
-    "supervisor de infraestructura", "supervisor de soporte",
-    "encargado de ti", "encargado de tecnologia", "encargado de sistemas",
-    "encargado de informatica", "encargado de infraestructura",
-    "encargado de seguridad", "encargado de soporte tecnico",
+    "director corporativo de ti y ciberseguridad",
+    "director de estrategia digital", "director de tecnologia y estrategia digital",
+    "director de innovacion tecnologica", "director de tecnologia e innovacion",
+    "director de proyectos ti", "director de servicios ti",
+    "director de soporte tecnico",
+    "cio", "chief information officer",
+    "cto", "chief technology officer",
+    "head of it", "head of technology", "head of infrastructure",
+    "head of security", "vp de tecnologia", "vp of technology",
+    # ================================================================
+    # COORDINACION
+    # ================================================================
+    "coordinador de ti", "coordinador ti", "coordinador it",
+    "coordinador de tecnologia", "coordinador de tecnologia de la informacion",
+    "coordinador de informatica", "coordinador de sistemas",
+    "coordinador de infraestructura", "coordinador de infraestructura y operaciones de ti",
+    "coordinador de infraestructura y soporte",
+    "coordinador de redes", "coordinador de telecomunicaciones",
+    "coordinador de soporte tecnico", "coordinador de soporte",
+    "coordinador de mesa de ayuda", "coordinador de service desk",
+    "coordinador de ciberseguridad", "coordinador de seguridad informatica",
+    "coordinador de desarrollo", "coordinador de aplicaciones",
+    "coordinador de base de datos", "coordinador de proyectos ti",
+    "coordinador de innovacion tecnologica",
+    "it coordinator", "infrastructure coordinator",
+    "support coordinator", "systems coordinator",
+    # ================================================================
+    # ENCARGADO / SUPERVISOR / RESPONSABLE
+    # ================================================================
+    "encargado de ti", "encargado ti", "encargado it",
+    "encargado de tecnologia", "encargado de tecnologia de la informacion",
+    "encargado de informatica", "encargado de sistemas",
+    "encargado de soporte tecnico", "encargado de soporte",
+    "encargado de redes", "encargado de infraestructura",
+    "encargado de infraestructura tecnologica",
+    "encargado de infraestructura de la tecnologia",
+    "encargado de tecnologia e innovacion",
+    "encargado de seguridad informatica", "encargado de ciberseguridad",
     "encargado de comunicaciones",
-    # === ADMINISTRADOR ===
-    "administrador de ti", "administrador de sistemas",
+    "supervisor de ti", "supervisor ti", "supervisor de informatica",
+    "supervisor de sistemas", "supervisor de infraestructura",
+    "supervisor de soporte tecnico", "supervisor de soporte",
+    "supervisor de redes",
+    "responsable de ti", "responsable de tecnologia",
+    # ================================================================
+    # ADMINISTRADOR
+    # ================================================================
+    "administrador de ti", "administrador de tecnologia",
+    "administrador de sistemas", "administrador de informatica",
     "administrador de infraestructura", "administrador de servidores",
     "administrador de redes", "administrador de seguridad",
     "administrador de base de datos", "dba",
-    # === CONSULTOR / ANALISTA SENIOR ===
+    "it administrator", "systems administrator",
+    # ================================================================
+    # LIDER / LEAD
+    # ================================================================
+    "lider de ti", "lider ti", "lider de tecnologia",
+    "lider de sistemas", "lider de informatica",
+    "lider de infraestructura", "lider de proyectos ti",
+    "lider de soporte", "lider de seguridad",
+    "lider de transformacion digital",
+    "team lead ti", "team lead it", "it lead",
+    "technical lead", "tech lead",
+    # ================================================================
+    # CONSULTOR / ANALISTA SENIOR / ESPECIALISTA
+    # ================================================================
     "consultor de tecnologia", "consultor de ti", "consultor it",
     "consultor cloud", "consultor de infraestructura",
     "consultor de ciberseguridad", "consultor de seguridad informatica",
     "analista de sistemas senior", "analista de infraestructura senior",
     "analista de soporte senior", "analista de seguridad senior",
-    # === LIDER ===
-    "lider de ti", "lider de tecnologia", "lider de sistemas",
-    "lider de infraestructura", "lider de proyectos ti",
-    "lider de soporte", "lider de seguridad",
-    # === SOPORTE TECNICO ===
+    "analista de ti senior",
+    "especialista de soporte", "especialista de soporte tecnico",
+    "especialista de infraestructura", "especialista de ti",
+    "especialista de tecnologia", "especialista de seguridad",
+    "especialista de ciberseguridad",
+    # ================================================================
+    # SOPORTE TECNICO
+    # ================================================================
     "soporte tecnico senior", "soporte tecnico lider",
     "tecnico de sistemas senior", "tecnico de soporte senior",
-    "especialista de soporte", "especialista de infraestructura",
-    # === AUDITOR ===
+    "tecnico de infraestructura senior",
+    # ================================================================
+    # AUDITOR
+    # ================================================================
     "auditor de sistemas", "auditor de ti", "auditor informatico",
     "auditor de seguridad", "auditor de tecnologia",
-    # === INGENIERO SENIOR ===
+    # ================================================================
+    # INGENIERO SENIOR
+    # ================================================================
     "ingeniero de sistemas senior", "ingeniero de infraestructura senior",
     "ingeniero de redes senior", "ingeniero de seguridad senior",
     "ingeniero cloud senior", "ingeniero de soporte senior",
-    # === AREAS TECNICAS (siempre relevantes) ===
+    # ================================================================
+    # AREAS TECNICAS
+    # ================================================================
     "infraestructura", "infraestructura ti", "infraestructura tecnologica",
     "ciberseguridad", "seguridad informatica", "seguridad de la informacion",
     "seguridad perimetral", "seguridad en la nube",
@@ -125,6 +193,9 @@ KEYWORDS = [
     "parches", "patch management", "actualizaciones",
     "cumplimiento normativo", "regulatorio", "auditoria",
     "riesgo tecnologico", "gestion de riesgos", "risk management",
+    "telecomunicaciones", "fibra optica", "conectividad",
+    "soporte tecnico", "mesa de ayuda", "service desk", "help desk",
+    "aplicaciones", "software", "desarrollo",
 ]
 
 # ============================================================
@@ -197,7 +268,7 @@ def scan_platform(platform):
     """Escanea una plataforma y devuelve vacantes encontradas"""
     results = []
     try:
-        query = quote("gerente director jefe coordinador encargado supervisor administrador lider sistemas informatica tecnologia infraestructura ciberseguridad cloud servidores redes soporte")
+        query = quote("gerente director coordinador encargado supervisor administrador lider sistemas informatica tecnologia infraestructura ciberseguridad cloud servidores redes soporte comunicaciones")
         url = platform["url"].format(query)
         r = requests.get(url, headers=HEADERS, timeout=15)
         if r.status_code == 200:
